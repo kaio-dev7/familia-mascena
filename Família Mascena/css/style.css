@@ -1,0 +1,185 @@
+:root{
+    --laranja:#fc6404;
+    --marron:#833301;
+    --preto: #000000;
+    --branco:#f6f6f6;
+    --verde: rgb(20, 165, 52);
+    --fonte-principal: "Inter";
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body{
+    font-family: var(--fonte-principal);
+    background-color: var(--branco);
+    color: var(--preto);
+    font-size: 1rem;
+    font-weight: 400;
+    height: 100vh;
+    
+}
+
+.conteudo{
+    display: flex;
+    /*width: 100%;*/
+    height: 80%;
+    justify-content: center;
+    text-align: center;    
+    padding: 5rem 0 0 0;
+    
+}
+
+.conteudo__logo{
+    /* margin-top: auto; */
+    height: 30rem;
+    flex-wrap: wrap;
+/*aspect-ratio: 16/8;*/
+    }
+
+    /*.flutuar-email{
+        position: fixed;
+        font-family: var(--fonte-principal);
+        text-decoration: none;       
+        margin: 1rem 1rem 0 0;
+        background:var(--laranja);
+        padding: 15px;
+        border-radius: 50px;
+        color: var(--branco);
+        font-weight: 600;
+        font-size: 24px;
+        width: fit-content;
+        box-shadow: var(--preto);
+        bottom:20px;
+        right: 20px;
+    }*/
+
+#div-fixa {
+    position: fixed;
+    bottom: 20px;
+    margin: 0 10px;
+    background: var(--verde);
+    width: 200px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.5s all;
+}
+
+#content {
+    position: fixed;
+    bottom:20px;
+    right: 20px;
+    margin: 0 10px;
+    background: var(--laranja);
+    width: 220px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.5s all;
+}
+
+#div-fixa.shrink {
+    width: 50px;
+    transition: 0.5s all;
+    overflow: hidden;
+}
+
+#content.shrink {
+    width: 50px;
+    transition: 0.5s all;
+    overflow: hidden;
+}
+
+#div-fixa img {
+    width: 50px;
+    height: 50px;
+}
+
+#content img {
+    width: 50px;
+    height: 50px;
+}
+
+
+#div-fixa a .flex-itens {
+    display: flex;
+    align-items: center;
+}
+
+#content a .flex-itens {
+    display: flex;
+    align-items: center;
+}
+
+/* ... (seu código CSS anterior) ... */
+
+#div-fixa a .flex-itens span,
+#content a .flex-itens span {
+    display: block;
+    font-family: var(--fonte-principal);
+    color: var(--preto);
+    margin-left: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    min-width: 170px;
+    opacity: 1; /* Opacidade inicial do texto */
+    transition: opacity 0.5s ease; /* Transição de opacidade do texto */
+}
+
+#div-fixa a .flex-itens span.aparecer,
+#content a .flex-itens span.aparecer {
+    opacity: 1; /* Opacidade final do texto */
+}
+
+/* ... (seu código CSS anterior) ... */
+
+
+a.logo {
+    text-decoration: none;
+}
+
+a.voar {
+    text-decoration: none;
+}
+
+.flutuar {
+    animation-name: flutuar;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+.voar {
+    animation-name: voar;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+
+@keyframes flutuar {
+    from {
+        transform: translate3d(0, 0, 0);
+        filter: brightness(100%);
+    }
+    to {
+        transform: translate3d(0, -15px, 0);
+        filter: brightness(150%);
+    }
+}
+
+
+@keyframes voar {
+    from {
+        transform: translate3d(0, 0, 0);
+        filter: brightness(100%);
+    }
+    to {
+        transform: translate3d(0, -15px, 0);
+        filter: brightness(150%);
+    }
+}
