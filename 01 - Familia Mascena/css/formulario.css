@@ -119,3 +119,13 @@ form button:hover{
 .texto-auto {
     text-transform: uppercase;
 }
+
+@media screen and (max-width: 500px) {
+    .text{
+        /*display: flex;
+        justify-content: center;
+        align-items: center;*/
+        font-size: 25px;
+    }
+
+}
